@@ -13,6 +13,12 @@ public class Biblioteca {
         return new ArrayList<>(livros);
     }
 
+    /**
+     * Busca livros por autor, ignorando maiúsculas/minúsculas.
+     *
+     * @param autor Nome do autor a ser buscado.
+     * @return Lista de livros do autor especificado.
+     */
     public List<Livro> buscarPorAutor(String autor) {
         return livros.stream()
             .filter(livro -> livro.getAutor().equalsIgnoreCase(autor))
